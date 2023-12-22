@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>YAMA</class>
+ <widget class="QMainWindow" name="YAMA">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>605</width>
+    <height>471</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>YAMA</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(253, 253, 255);
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QCheckBox" name="weatherCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+    background-color: rgb(236, 230, 255)
+}
+
+QCheckBox {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Weather subscription</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="currencyCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>10</y>
+      <width>191</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+    background-color: rgb(236, 230, 255)
+}
+
+QCheckBox {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Currency subscription</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="stocksCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>10</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QCheckBox {
+    background-color: rgb(236, 230, 255)
+}
+
+QCheckBox {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Stocks subscription</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="temperatureLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Temperature:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="windLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>290</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Wind</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="humidityLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>360</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Humidity</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="atmosphericLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>200</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Atmospheric</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pressureLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>pressure</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="temperatureTextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+        border-radius: 10px;
+        border: 1.5px solid rgb(236, 230, 255);
+}
+
+QTextBrowser {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="atmoPressTextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>240</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+        border-radius: 10px;
+        border: 1.5px solid rgb(236, 230, 255);
+}
+
+QTextBrowser {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="windTextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>310</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+        border-radius: 10px;
+        border: 1.5px solid rgb(236, 230, 255);
+}
+
+QTextBrowser {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="humidityTextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>380</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+        border-radius: 10px;
+        border: 1.5px solid rgb(236, 230, 255);
+}
+
+QTextBrowser {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="buyDollarTextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>80</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+        border-radius: 10px;
+        border: 1.5px solid rgb(236, 230, 255);
+}
+
+QTextBrowser {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dollarLabel">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>60</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Dollar</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="buyEuroTextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>150</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+        border-radius: 10px;
+        border: 1.5px solid rgb(236, 230, 255);
+}
+
+QTextBrowser {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="EuroLabel">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>130</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Euro</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="amazonLabel">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>60</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Amazon</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="airbnbLabel">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>140</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Airbnb</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="payPalLabel">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>220</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>PayPal</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="priceAmazonLabel">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>90</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Price</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="amazonTextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>80</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+        border-radius: 10px;
+        border: 1.5px solid rgb(236, 230, 255);
+}
+
+QTextBrowser {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="airBnbTextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>160</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+        border-radius: 10px;
+        border: 1.5px solid rgb(236, 230, 255);
+}
+
+QTextBrowser {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="priceAirBnbLabel">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>170</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Price</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="payPalTextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>240</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+        border-radius: 10px;
+        border: 1.5px solid rgb(236, 230, 255);
+}
+
+QTextBrowser {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pricePayPalLabel">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>250</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Price</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="mainweatherTextBrowser">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextBrowser {
+        border-radius: 10px;
+        border: 1.5px solid rgb(236, 230, 255);
+}
+
+QTextBrowser {
+    font-family: Roboto;
+    font-size: 15px;
+        font-weight: bold;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mainweatherLabel">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    background-color: rgb(247, 246, 255)
+}
+
+QLabel {
+    font-family: Roboto;
+    font-size: 13px;
+        font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Main weather</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>605</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

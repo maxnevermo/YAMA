@@ -1,0 +1,9 @@
+﻿  main.cpp
+I:\uni\thirdsem\os\YAMA\SERVER\YAMA-SERVER\main.cpp(356,27): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+I:\uni\thirdsem\os\YAMA\SERVER\YAMA-SERVER\main.cpp(420,64): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+I:\uni\thirdsem\os\YAMA\SERVER\YAMA-SERVER\main.cpp(428,64): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+I:\uni\thirdsem\os\YAMA\SERVER\YAMA-SERVER\main.cpp(435,62): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+I:\uni\thirdsem\os\YAMA\SERVER\YAMA-SERVER\main.cpp(181): warning C4715: 'GetCurrencyPrice': not all control paths return a value
+I:\uni\thirdsem\os\YAMA\SERVER\YAMA-SERVER\main.cpp(109): warning C4715: 'GetStockPrice': not all control paths return a value
+I:\uni\thirdsem\os\YAMA\SERVER\YAMA-SERVER\main.cpp(273): warning C4715: 'GetWheather': not all control paths return a value
+  YAMA-SERVER.vcxproj -> I:\uni\thirdsem\os\YAMA\SERVER\YAMA-SERVER\x64\Debug\YAMA-SERVER.exe
